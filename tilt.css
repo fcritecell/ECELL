@@ -1,0 +1,70 @@
+
+/* sponsors carousels */
+ 
+.client-logo-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  mask: linear-gradient();
+}
+
+
+.client {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  display: flex;
+}
+
+.client-logo-left {
+  animation: logomoveleft 20s linear infinite;
+
+}
+
+.client-logo-right {
+  animation: logomoveright 20s linear infinite;
+
+}
+
+
+.client li {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 20px !important;
+ 
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+}
+.client img {
+  height: 100px;
+  width: 100x; 
+}  
+
+
+@keyframes logomoveleft {
+from{
+    transform: translate(0%);
+  }
+  to{
+    transform: translate(-50%);
+  }
+}
+
+@keyframes logomoveright {
+  from{
+    transform: translate(-50%);
+  }
+  to{
+    transform: translate(0%);
+  }
+}
+
+
+
+
+

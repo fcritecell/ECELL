@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  
+  <link rel="stylesheet">
+  <link rel="stylesheet" href="load.css">
+  <script>
+    function myfunction() {
+      var loader = document.getElementById('preloader');
+      setTimeout(function () {
+        loader.style.display = 'none';
+      }, 6000);
+    }
+
+  </script>
+</head>
+
+<body onload="myfunction()" style="background-color: #002D62;">
+  <div id="preloader"></div>
+  <h1 style="text-align: center; color: whitesmoke;"><strong>GALLERY</strong></h1>
+  <div class="container">
+    <div class="photo-gallery">
+      <div class="column">
+        <div class="photo" style="height: 40%;margin-top: 30%;">
+          <img src="images/e1image.jpg" alt="">
+          <div class="cover">
+          <div class="overlay">
+            <a href="brandblitz.html">&#x1F517;</a>
+          </div>
+        </div>
+          <div class="text1">...</div>
+          <div class="text2">BRANDBLITZ</div>
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/Kl1gC0ve620" alt="">
+          <div class="cover">
+          <div class="overlay">
+            <a href="your-link-2">&#x1F517;</a>
+          </div>
+        </div>
+          <div class="text1">...</div>
+          <div class="text2">Event name</div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="photo">
+          <img src="images/e2image.jpg" alt="">
+          <div class="cover">
+          <div class="overlay">
+            <a href="your-link-3">&#x1F517;</a>
+          </div>
+        </div>
+          <div class="text1">...</div>
+          <div class="text2">Event name</div>
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/v1OW17UcR-Q" alt="">
+          <div class="cover">
+          <div class="overlay">
+            <a href="your-link-4">&#x1F517;</a>
+          </div>
+        </div>
+          <div class="text1">...</div>
+          <div class="text2">Event name</div>
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/Wpg3Qm0zaGk" alt="">
+          <div class="cover">
+          <div class="overlay">
+            <a href="your-link-5">&#x1F517;</a>
+          </div>
+        </div>
+        <div class="text1">...</div>
+        <div class="text2">Event name</div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="photo" style="height: 30%;margin-top: 20%;">
+          <img src="https://source.unsplash.com/W3FC_bCPw8E" alt="">
+          <div class="cover">
+          <div class="overlay">
+            <a href="your-link-6">&#x1F517;</a>
+          </div>
+        </div>
+        <div class="text1">...</div>
+        <div class="text2">Event name</div>
+        </div>
+        <div class="photo" style="height: 58%;">
+          <img src="https://source.unsplash.com/rBRZLPVLQg0" alt="">
+          <div class="cover">
+          <div class="overlay">
+            <a href="your-link-7">&#x1F517;</a>
+          </div>
+        </div>
+        <div class="text1">...</div>
+        <div class="text2">Event name</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .container{
+  max-width: 1224px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.photo-gallery{
+  display: flex;
+  
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+img:hover{
+  background:rgba(0, 0, 0,0.6) ;
+}
+.photo img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+.container {
+  position: relative;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  
+}
+.photo:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.photo:hover img {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cover .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  
+}
+
+.photo:hover .overlay {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.overlay a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: -3px; /* Adjust the margin as needed */
+}
+
+.photo:hover .text1{
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.photo:hover .text2{
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  position: absolute;
+  top: 12%;
+  left: 35%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cover{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #6d777a;
+}
+
+.photo:hover .cover{
+  opacity:0.6;
+}
+
+.photo:hover .overlay {
+  opacity: 1;
+}
+
+@media(max-width:768px){
+  .photo-gallery{
+    flex-direction: column;
+  }
+}
+  </style>
+ </body>
+</html>

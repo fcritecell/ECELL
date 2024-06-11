@@ -1,0 +1,247 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP</title>
+  <link rel="stylesheet" href="/stylings/slidestyle.css">
+</head>
+
+<body>
+  <table style="width:100%">
+    <tr>
+      <th>
+        <div class="slider">
+          <div class="slider-wrapper flex">
+            <div class="slide flex">
+              <div class="slide-image slider-link prev"><img
+                  src="https://thehealthsciencesacademy.org/wp-content/uploads/2021/08/CNP-Earn-while-you-learn-01-1.png">
+                <div class="overlay"></div>
+              </div>
+              <div class="slide-content">
+
+                <div class="slide-title">LEARN WHILE YOU EARN</div>
+                <div class="slide-text">Through SIP, we aim to collaborate with the start-ups willing to offer
+                  internship opportunities to the students of FCRIT. This initiative has been extremely beneficial for
+                  both start-ups as well as students. </div>
+
+              </div>
+            </div>
+            <div class="slide flex">
+              <div class="slide-image slider-link next"><img
+                  src="https://bloghost0.orowealth.com/wp-content/uploads/2019/02/best-sip-2018.jpg">
+                <div class="overlay"></div>
+              </div>
+              <div class="slide-content">
+
+                <div class="slide-title">STARTUP INTERNSHIP PROGRAM</div>
+                <div class="slide-text">SIP provides FCRIT students with an unprecedented opportunity to connect with
+                  young and upcomig companies who are set to become powerhouses of next generations of India.</div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="arrows">
+            <a href="#" title="Previous" class="arrow slider-link prev"></a>
+            <a href="#" title="Next" class="arrow slider-link next"></a>
+          </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+          function showConfirmation() {
+            var confirmation = confirm("Your information has been submitted successfully!\nClick OK to go back to the form page.");
+        if (confirmation) {
+          window.location.href = window.location.href;        }
+          }
+
+          (function ($) {
+
+            $(document).ready(function () {
+
+              var s = $('.slider'),
+                sWrapper = s.find('.slider-wrapper'),
+                sItem = s.find('.slide'),
+                btn = s.find('.slider-link'),
+                sWidth = sItem.width(),
+                sCount = sItem.length,
+                slide_date = s.find('.slide-date'),
+                slide_title = s.find('.slide-title'),
+                slide_text = s.find('.slide-text'),
+                slide_more = s.find('.slide-more'),
+                slide_image = s.find('.slide-image img'),
+                sTotalWidth = sCount * sWidth;
+
+              sWrapper.css('width', sTotalWidth);
+              sWrapper.css('width', sTotalWidth);
+
+              var clickCount = 0;
+
+              btn.on('click', function (e) {
+                e.preventDefault();
+
+                if ($(this).hasClass('next')) {
+
+                  (clickCount < (sCount - 1)) ? clickCount++ : clickCount = 0;
+                } else if ($(this).hasClass('prev')) {
+
+                  (clickCount > 0) ? clickCount-- : (clickCount = sCount - 1);
+                }
+                TweenMax.to(sWrapper, 0.4, { x: '-' + (sWidth * clickCount) })
+
+
+                //CONTENT ANIMATIONS
+
+                var fromProperties = { autoAlpha: 0, x: '-50', y: '-10' };
+                var toProperties = { autoAlpha: 0.8, x: '0', y: '0' };
+
+                TweenLite.fromTo(slide_image, 1, { autoAlpha: 0, y: '40' }, { autoAlpha: 1, y: '0' });
+                TweenLite.fromTo(slide_date, 0.4, fromProperties, toProperties);
+                TweenLite.fromTo(slide_title, 0.6, fromProperties, toProperties);
+                TweenLite.fromTo(slide_text, 0.8, fromProperties, toProperties);
+                TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
+
+              });
+
+            });
+          })(jQuery);
+
+          $('.overlay').addClass('overlay-blue');
+        </script>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <br>
+        <br>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <div class="head">
+          <div class="intern">Why intern at a startup?</div>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <br>
+
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <div class="container">
+
+          <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Learn more</h2>
+              <p>Big companies are already established, hence the problems encountered during the internship might not
+                be multi-dimensional, which are encountered in startups. With small companies, work is fluid, because of
+                the fragile divisions between streams.</p>
+
+            </div>
+          </div>
+          <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Contribute more</h2>
+              <p>At large companies, an intern’s work is likely to disappear in the ocean of large projects and ideas.On
+                the other hand, interning in a startup, would make you more responsible and your scale of contribution
+                to the company would be more, in comparison.</p>
+
+            </div>
+          </div>
+          <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Network better</h2>
+              <p>While working for a startup,you develop more affectionate contacts with the whole team.This might help
+                greatly if that startup shoots up suddenly and goes big. While in the bigger league, people are a lot
+                more professional and such contacts are not easy to make.</p>
+
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </th>
+    </tr>
+    <br>
+    <tr>
+      <th>
+        <div class="card">
+          <div class="cont">
+            <h1>About Us</h1>
+            <br>
+            <p>Startup Internship program is a part of Entrepreneurship Cell FCRIT. Through SIP, we aim to collaborate
+              with the start-ups willing to offer internship opportunities to the students of FCRIT. This initiative has
+              been extremely beneficial for both start-ups as well as the students. Startups get a bunch of highly
+              enthusiastic students, with a high susceptibility to learning new things; and creative minds that are
+              determined on proving their mettle in the next big league of their life.
+
+              SIP Internship season would kick off in the month of January. E-Cell through SIP help students get real
+              life entrepreneurial experience. Startups from all over the world register with SIP and organize skype
+              interviews or personal interviews with students for summer internships. Resume workshops, preparation
+              sessions among more are conducted every year as part of the recruitment process with these startups.</p>
+
+          </div>
+        </div>
+        <br>
+        <br>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <div
+          style="max-width: 600px; margin: 50px auto; background-color: #2b2424; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <h2 style="text-align: center;">Startup Idea Submission Form</h2>
+          <form action="process.php" method="post" onsubmit="showConfirmation()">
+            <label for="name" style="font-weight: bold;">Your Name:</label>
+            <input type="text" id="name" name="name"
+              style="color: black; width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"
+              required>
+
+            <label for="email" style="font-weight: bold;">Your Email:</label>
+            <input type="email" id="email" name="email"
+              style="color: black;width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"
+              required>
+
+            <label for="phone_no" style="font-weight: bold;">Phone Number:</label>
+            <input type="text" id="phone_no" name="phone_no"
+              style="color: black;width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"
+              required>
+
+            <label for="department" style="font-weight: bold;">Department:</label>
+            <input type="text" id="department" name="department"
+              style="color: black;width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"
+              required>
+
+            <label for="study-year" style="font-weight: bold;">Study Year:</label>
+            <input type="text" id="study-year" name="study-year"
+              style="color: black;width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"
+              required>
+
+            <label for="roll-number" style="font-weight: bold;">Roll Number:</label>
+            <input type="text" id="roll-number" name="roll-number"
+              style="color: black;width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"
+              required>
+
+            <label for="idea" style="font-weight: bold;">Describe Your Startup Idea:</label>
+            <textarea id="idea" name="idea"
+              style="color: black; width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; height: 150px;"
+              required></textarea>
+
+            <input type="submit" value="Submit"
+              style="background-color: #77186f; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+          </form>
+        </div>
+      </th>
+    </tr>
+  </table>
+</body>
+
+</html>

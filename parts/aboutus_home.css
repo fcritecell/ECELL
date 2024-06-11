@@ -1,0 +1,253 @@
+
+.header-pic{
+  /* position: absolute; */
+  width: 95vw;
+  height: 500px;
+  /* top: 0px; */
+  padding: 0px;
+  }
+
+
+
+
+
+.header-pic img{
+      /* position: absolute; */
+      width: 100vw;
+      height: 500px;
+      left: 3px;
+      /* top: 0px; */
+  }
+  .info{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      margin-bottom: 20px;
+    
+  }
+  .about-us-content .content-para{
+      top:650px;
+      padding: 30px;
+      position: absolute;
+      font-family: 'Syne', sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  justify-content:center;
+  }
+  
+  .title{
+  position: fixed;
+  width: 569px;
+  height: 60px;
+  left: 470px;
+  top:580px;
+  margin-top: 49px;
+  font-family: 'Syne', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #000000;
+  }
+  
+  .vision{
+      font-size: 27px;
+      font-weight: 400;
+      padding: 30px;
+      font-family: 'Syne', sans-serif;
+      font-style: normal;
+      text-align: center;
+      margin-top: 23px;
+      margin-left:900px;
+      height: 100px;
+      width: 40%;
+      
+      display: flex;
+      flex-direction: column;
+      color: #000000;
+      line-height: 44px;   
+  
+  }
+  
+  .heading{
+      font-family: 'Syne', sans-serif;
+      font-size: 35px;
+      font-weight: 500;
+      font-size: 48px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 20px;
+      margin-left:10px;
+      margin-bottom: 20px;
+      color:#000000;
+  }
+  
+  .mission{
+      font-size: 27px;
+      font-weight: 400;
+      padding: 30px;
+      text-align: center;
+      margin-top: 20px;
+      margin-left:10px;
+      height: 60px;
+      width: 40%;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      line-height: 44px;
+      font-family: 'Syne', sans-serif;
+      font-style: normal;
+  }
+  
+  
+   .image1 img{
+      height:500px;
+      width: 700px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      margin-left: 50px;
+  }
+  
+  .image2 img{
+      height:500px;
+      width: 700px;
+      margin-top: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      float: right;
+      padding-left: 50vw;
+      position: absolute;
+  }
+  @media only screen and (max-width: 768px) {
+      .header-pic {
+          height: 200px;
+      }
+  
+      .header-pic img {
+          height: 100%;
+      }
+  
+      .info {
+          padding: 5px;
+          margin-bottom: 5px;
+      }
+  
+      .about-us-content .content-para {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: left;
+      }
+  
+      .title {
+          font-size: 24px;
+          line-height: 32px;
+      }
+  
+      .vision,
+      .heading
+      {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: left;
+          margin-top: 30px;
+          flex: none;
+      }
+      .mission{
+          font-size: 16px;
+          line-height: 20px;
+          text-align: left;
+          margin-top: 30px;
+          flex: none;
+      }
+  
+      .image1 img,
+      .image2 img {
+       display: none;
+      }
+  }
+  
+  @media screen and (max-width: 800px){
+  .header-pic {
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 0;
+  }
+  
+  .header-pic img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      left: 0;
+      top: 0;
+  }
+  
+  .info {
+      padding: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .about-us-content .content-para {
+      top: unset;
+      padding: 15px;
+      position: relative;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: left;
+  }
+  
+  .title {
+      position: relative;
+      width: 100%;
+      height: auto;
+      left: 0;
+      top: unset;
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+  }
+  
+  .vision {
+      font-size: 18px;
+      padding: 15px;
+      margin-top: 10px;
+      margin-left: 10px;
+      width: 100%;
+  }
+  
+  .heading {
+      font-size: 24px;
+      padding: 15px;
+      text-align: left;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .mission {
+      font-size: 18px;
+      padding: 15px;
+      text-align: left;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .image1 img,
+  .image2 img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      margin-left: 0;
+      float: none;
+  }
+  }
+  
+  

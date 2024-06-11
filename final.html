@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECELL FCRIT</title>
+    <link rel="stylesheet" href="stylings/aboutus_home.css">
+    <link rel="stylesheet" href="stylings/past_speakers.css">
+    <link rel="stylesheet" href="tilt.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="stylings/footerstyle.css">
+    <link rel="stylesheet" href="stylings/card.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="grid">
+        <div class="header" id="homehead">
+            <div class="header1">
+                <div class="mynav">
+                    <nav class="navbar navbar-expand-sm navbar-blue" style="height: 100px; top: 0; align-items: baseline;">
+                        <a href="" class="navbar-brand">
+                            <img id="image" src="images/logoblue.png" alt="" height="90" width="80">
+                            FCRIT</a>
+                        <div class="nav-options">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="#homehead" class="nav-link"
+                                        style="font-weight: bold;">Home</a></li>
+                                <li class="nav-item"><a href="/parts/sip.html" class="nav-link"
+                                        style="font-weight: bold;">SIP</a></li>
+
+                                <div class="dropdown">
+                                    <li class="nav-link-dropbtn" style="font-weight: bold;">About Us</li>
+                                    <div class="dropdown-content">
+                                        <a href="/parts/about_us.html">About</a>
+                                        <a href="/parts/events.html">Events</a>
+                                        <a href="/parts/team.html">Team</a>
+
+                                    </div>
+                                </div>
+                                <li class="nav-item"><a href="/parts/blogs.html" class="nav-link"
+                                        style="font-weight: bold;">Blogs &
+                                        E-education</a></li>
+                                </li>
+
+                                <li class="nav-item"><a href="/parts/reg.html" class="nav-link"
+                                        style="font-weight: bold;">Register</a></li>
+                                <div class="container" onclick="myFunction(this)">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 24 140 28" preserveAspectRatio="none">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-150 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-852z" />
+                    </defs>
+                    <g class="parallax" transform="rotate(180 48 36)">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255, 0.7)" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255, 0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255, 0.4)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill=" rgba(255,255,255, 0.4)" />
+                    </g>
+                </svg>
+
+                <div class="mask">
+                    <video class="clipped-video" muted loop autoplay>
+                        <source src="bg-new.mp4">
+                        </source>
+                    </video>
+
+                </div>
+                <div class="img-text">
+                    <h2>Fostering the spirit of Entrepreneurship</h2>
+                </div>
+
+
+
+                <script>
+                    function myFunction(x) {
+                        x.classList.toggle("change");
+                    }
+
+                    window.addEventListener('scroll', function () {
+
+                        let scrollValue = window.scrollY;
+                        let mask = document.querySelector('.mask');
+                        console.log(scrollValue, "Hi");
+                        // Example: change mask size based on scroll
+                        let newSize = 98 + scrollValue; // You can adjust this calculation to suit your needs
+
+                        // Applying the new size to the mask element
+                        mask.style.maskSize = newSize + '%';
+                    })
+                </script>
+            </div>
+        </div>
+
+        <!-- about us -->
+        <div class="about-us">
+            <div class="about_us">
+                <div id="site-background">
+                    <div class="layer-wrapper">
+                        <div class="layer1">
+                            <div class="element2"><img src="images/element2.png" alt="Designerpart Designagentur"></div>
+                            <div class="element5"><img src="images/element5.png" alt="Designerpart Designagentur"></div>
+                        </div>
+                        <div class="layer2">
+                            <div class="element3"><img src="images/element3.png" alt="Designerpart Designagentur"></div>
+                            <div class="element4"><img src="images/element4.png" alt="Designerpart Designagentur"></div>
+                            <div class="element6"><img src="images/element6.png" alt="Designerpart Designagentur"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="title"> ABOUT E-CELL FCRIT </div>
+                    <p class="about-us">FCRIT E-Cell is an non-profit student’s organization dedicated to promoting the
+                        spirit of entrepreneurship among students. It is a platform for students to get excellent
+                        professional mentorship from experienced, varied and distinguished mentor pool, and to showcase
+                        their ideas in front of Venture Capitalists, Angel Investors and Industry Leaders etc. It is a
+                        get-together of motivated students, aspiring entrepreneurs as well as established professionals,
+                        who will meet under various formal and informal sessions, which include Guest Lectures,
+                        Workshops, Panel Discussions, Product Expo, Connect the Dots conference.</p>
+
+
+                </div>
+                <div class="counter-up">
+                    <div class="content_about">
+                        <div class="box">
+                            <div class="icon"><img src="images/student.webp"></div>
+                            <div class="count">
+                                <div class="counter">5000</div><span>+</span>
+                            </div>
+                            <div class="text">COMMUNITY</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="images/social.webp"></div>
+                            <div class="count">
+                                <div class="counter">10000</div><span>+</span>
+                            </div>
+                            <div class="text">SOCIAL REACH</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="images/startup1.png"></div>
+                            <div class="count">
+                                <div class="counter">35</div><span>+</span>
+                            </div>
+                            <div class="text">STARTUPS</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="images/trophy.png"></div>
+                            <div class="count">
+                                <div class="counter">15</div><span>+</span>
+                            </div>
+                            <div class="text">EVENTS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <a href="./parts/about_us.html" target="_blank">This is a link</a> -->
+
+                <button class="button-21" role="button" onclick="window.location.href ='./parts/about_us.html'">KNOW
+                    MORE</button>
+                <script>
+                    $(document).ready(function () {
+                        $('.counter').counterUp({
+                            delay: 10,
+                            time: 1200
+                        });
+                    });
+                </script>
+            </div>
+
+
+            <!-- what we do -->
+            <div class="wrapper">
+                <div class="title">OUR INITIATIVES</div>
+            </div>
+            <div class="card-containers" style="font-family: 'Titillium Web', Helvetica;" >
+                <div class="cardi">
+                    <h2 class="headings" style="text-align: center;">E-SUMMIT</h2>
+                    <div class="card-content">
+                        <h1 class="event-title">E-SUMMIT
+                            <a href="/parts/events.html" class="arrow-circle">
+                                <div class="circle">
+                                    <div class="arrow">&#10140;</div>
+                                </div>
+                            </a>
+                        </h1>
+
+                        <hr class="straight-line">
+                        <br>
+                        <p>ECELL FCRIT's Flagship event
+                            Stay tuned for a very amazing event upcoming
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cardi" style="background-color:#ffcd4f; align-content: center;align-items: center;">
+                    <h2 class="headings" style="text-align: center;"> StartUp Internship Program </h2>
+                    <div class="card-content">
+                        <h1 class="event-title">START-UP INTERNSHIP PROGRAM
+                            <a href="/parts/sip.html" class="arrow-circle">
+                                <div class="circle">
+                                    <div class="arrow">&#10140;</div>
+                                </div>
+                            </a>
+                        </h1>
+                        <hr class="straight-line">
+                        <br>
+                        <p>A program specially organized for students encouragement towards start-ups and hands on
+                            learning by our very own Alumnis of FCRIT, Vashi
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="cardi" style="background-color: #607bda;">
+                    <h2 class="headings" style="text-align: center;">FLAGSHIP EVENT COMING UP</h2>
+
+                    <div class="card-content">
+                        <h1 class="event-title">STAY TUNED :)
+                            <a href="#" class="arrow-circle">
+                                <div class="circle">
+                                    <div class="arrow">&#10140;</div>
+                                </div>
+                            </a>
+                        </h1>
+
+                        <hr class="straight-line">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="cardi" style="background-color: #ff7a7a;">
+                    <h2 class="headings style="text-align: center;">PAST EVENTS</h2>
+                    <div class="card-content">
+                        <h1 class="event-title">CHECK OUT THE PAST EVENTS CONDUCTED BY ECELL FCRIT
+                            <a href="/parts/events.html" class="arrow-circle">
+                                <div class="circle">
+                                    <div class="arrow">&#10140;</div>
+                                </div>
+                            </a>
+                        </h1>
+                        <hr class="straight-line">
+                        <br>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wrapper">
+                <div class="title">OUR SPONSORS</div>
+            </div>
+            <div class="sponsors" id="spons">
+                <div class="client-logo-wrap">
+                    <ul class="client client-logo-left">
+                        <li><img src="https://i.pinimg.com/originals/82/c6/5b/82c65b9bb0a75026fc4c82a438b4cc9b.jpg"
+                                alt="" /></li>
+                        <li><img src="https://www.seekpng.com/png/detail/4-46391_mountain-png-mountain-logo-transparent-background.png"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCJnBPofTFdBgRTMZ8UND5QcLVOACuMWq3Ug&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://png.pngtree.com/png-vector/20200921/ourmid/pngtree-red-and-black-logo-png-image_2348180.jpg"
+                                alt="" /></li>
+                        <li><img src="https://cdn.freebiesupply.com/logos/large/2x/starbucks-coffee-logo-png-transparent.png"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGhquYjK821sbhrh14O7bQjbALgTuctnpXQ&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://www.freeiconspng.com/thumbs/logo-design/3d-link-logo-brand-design-png-image-12.png"
+                                alt="" /></li>
+                        <li><img src="https://w7.pngwing.com/pngs/453/603/png-transparent-logo-symmetry-white-neck-font-tattoo-wings-white-logo-symmetry-thumbnail.png"
+                                alt="" /></li>
+                        <li><img src="https://png.pngtree.com/png-vector/20210809/ourmid/pngtree-o-letter-logo-png-image_3791708.jpg"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqp4TJ4aQGngp66T-SMCH0WWlik8CH_6inTQ&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://assets.turbologo.com/blog/en/2018/03/19085254/prozrachniy-logo-1-800x575.png"
+                                alt="" /></li>
+                        <li><img src="https://cdn.freebiesupply.com/logos/large/2x/nike-4-logo-png-transparent.png"
+                                alt="" /></li>
+                        <li><img src="https://purepng.com/public/uploads/large/google-stadia-logo-3cx.png" alt="" />
+                        </li>
+                        <li><img src="https://png.pngtree.com/png-vector/20211023/ourmid/pngtree-salon-logo-png-image_4004444.png"
+                                alt="" /></li>
+
+                        <li><img src="https://i.pinimg.com/originals/82/c6/5b/82c65b9bb0a75026fc4c82a438b4cc9b.jpg"
+                                alt="" /></li>
+                        <li><img src="https://www.seekpng.com/png/detail/4-46391_mountain-png-mountain-logo-transparent-background.png"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCJnBPofTFdBgRTMZ8UND5QcLVOACuMWq3Ug&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://png.pngtree.com/png-vector/20200921/ourmid/pngtree-red-and-black-logo-png-image_2348180.jpg"
+                                alt="" /></li>
+                        <li><img src="https://cdn.freebiesupply.com/logos/large/2x/starbucks-coffee-logo-png-transparent.png"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGhquYjK821sbhrh14O7bQjbALgTuctnpXQ&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://www.freeiconspng.com/thumbs/logo-design/3d-link-logo-brand-design-png-image-12.png"
+                                alt="" /></li>
+                        <li><img src="https://w7.pngwing.com/pngs/453/603/png-transparent-logo-symmetry-white-neck-font-tattoo-wings-white-logo-symmetry-thumbnail.png"
+                                alt="" /></li>
+                        <li><img src="https://png.pngtree.com/png-vector/20210809/ourmid/pngtree-o-letter-logo-png-image_3791708.jpg"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqp4TJ4aQGngp66T-SMCH0WWlik8CH_6inTQ&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://assets.turbologo.com/blog/en/2018/03/19085254/prozrachniy-logo-1-800x575.png"
+                                alt="" /></li>
+                        <li><img src="https://cdn.freebiesupply.com/logos/large/2x/nike-4-logo-png-transparent.png"
+                                alt="" /></li>
+                        <li><img src="https://purepng.com/public/uploads/large/google-stadia-logo-3cx.png" alt="" />
+                        </li>
+                        <li><img src="https://png.pngtree.com/png-vector/20211023/ourmid/pngtree-salon-logo-png-image_4004444.png"
+                                alt="" /></li>
+
+                    </ul>
+
+                </div>
+                <div class="client-logo-wrap  mt-3">
+                    <ul class="client  client-logo-right">
+                        <li><img src="https://i.pinimg.com/originals/82/c6/5b/82c65b9bb0a75026fc4c82a438b4cc9b.jpg"
+                                alt="" /></li>
+                        <li><img src="https://www.seekpng.com/png/detail/4-46391_mountain-png-mountain-logo-transparent-background.png"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCJnBPofTFdBgRTMZ8UND5QcLVOACuMWq3Ug&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://png.pngtree.com/png-vector/20200921/ourmid/pngtree-red-and-black-logo-png-image_2348180.jpg"
+                                alt="" /></li>
+                        <li><img src="https://cdn.freebiesupply.com/logos/large/2x/starbucks-coffee-logo-png-transparent.png"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGhquYjK821sbhrh14O7bQjbALgTuctnpXQ&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://www.freeiconspng.com/thumbs/logo-design/3d-link-logo-brand-design-png-image-12.png"
+                                alt="" /></li>
+                        <li><img src="https://w7.pngwing.com/pngs/453/603/png-transparent-logo-symmetry-white-neck-font-tattoo-wings-white-logo-symmetry-thumbnail.png"
+                                alt="" /></li>
+                        <li><img src="https://png.pngtree.com/png-vector/20210809/ourmid/pngtree-o-letter-logo-png-image_3791708.jpg"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqp4TJ4aQGngp66T-SMCH0WWlik8CH_6inTQ&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://assets.turbologo.com/blog/en/2018/03/19085254/prozrachniy-logo-1-800x575.png"
+                                alt="" /></li>
+                        <li><img src="https://cdn.freebiesupply.com/logos/large/2x/nike-4-logo-png-transparent.png"
+                                alt="" /></li>
+                        <li><img src="https://purepng.com/public/uploads/large/google-stadia-logo-3cx.png" alt="" />
+                        </li>
+                        <li><img src="https://png.pngtree.com/png-vector/20211023/ourmid/pngtree-salon-logo-png-image_4004444.png"
+                                alt="" /></li>
+
+
+
+                        <li><img src="https://i.pinimg.com/originals/82/c6/5b/82c65b9bb0a75026fc4c82a438b4cc9b.jpg"
+                                alt="" /></li>
+                        <li><img src="https://www.seekpng.com/png/detail/4-46391_mountain-png-mountain-logo-transparent-background.png"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCJnBPofTFdBgRTMZ8UND5QcLVOACuMWq3Ug&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://png.pngtree.com/png-vector/20200921/ourmid/pngtree-red-and-black-logo-png-image_2348180.jpg"
+                                alt="" /></li>
+                        <li><img src="https://cdn.freebiesupply.com/logos/large/2x/starbucks-coffee-logo-png-transparent.png"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGhquYjK821sbhrh14O7bQjbALgTuctnpXQ&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://www.freeiconspng.com/thumbs/logo-design/3d-link-logo-brand-design-png-image-12.png"
+                                alt="" /></li>
+                        <li><img src="https://w7.pngwing.com/pngs/453/603/png-transparent-logo-symmetry-white-neck-font-tattoo-wings-white-logo-symmetry-thumbnail.png"
+                                alt="" /></li>
+                        <li><img src="https://png.pngtree.com/png-vector/20210809/ourmid/pngtree-o-letter-logo-png-image_3791708.jpg"
+                                alt="" /></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqp4TJ4aQGngp66T-SMCH0WWlik8CH_6inTQ&usqp=CAU"
+                                alt="" /></li>
+                        <li><img src="https://assets.turbologo.com/blog/en/2018/03/19085254/prozrachniy-logo-1-800x575.png"
+                                alt="" /></li>
+                        <li><img src="https://cdn.freebiesupply.com/logos/large/2x/nike-4-logo-png-transparent.png"
+                                alt="" /></li>
+                        <li><img src="https://purepng.com/public/uploads/large/google-stadia-logo-3cx.png" alt="" />
+                        </li>
+                        <li><img src="https://png.pngtree.com/png-vector/20211023/ourmid/pngtree-salon-logo-png-image_4004444.png"
+                                alt="" /></li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="wrapper">
+                <div class="title">OUR PAST SPEAKERS <br> </div>
+            </div>
+            <div class="pastspeakers">
+                <div class="carousel"
+                    data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false, "autoPlay": 1500 ,"wrapAround":true }'>
+                    <div class="carousel-cell">
+                        <!--profile card start-->
+                        <div class="card">
+                            <img src="images/shivkumar_valadi.jfif" alt="Avatar">
+                            <div class="container">
+                                <h4><b>Mr.Shivkumar Valadi</b></h4>
+                                <p>Founder, Atri MarCon pvt Ltd</p>
+                            </div>
+                        </div>
+                        <div class="feedback">
+                            <p>I see a lot of energy that has a lot of potential if channelised in the right way. Love
+                                the initiative of
+                                the E-Cell and the industry-student interactions
+                                which helps prepare the students for their corporate and entrepreneurial life ahead</p>
+                        </div>
+
+                        <!--profile card end-->
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="card">
+                            <img src="images/yogendra.jpeg" alt="Avatar">
+                            <div class="container">
+                                <h4><b>Mr.Yogendra Joshi </b></h4>
+                                <p>Founder and Consultant ,MoneyBolism</p>
+                            </div>
+
+                        </div>
+                        <div class="feedback">
+                            <p>The E-Cell at FCRIT Vashi fosters innovation, entrepreneurship, and collaboration,
+                                empowering students to
+                                transform ideas into ventures.
+                                It cultivates a dynamic ecosystem essential for nurturing future leaders and innovators.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="card">
+                            <img src="images/sagar_ranshoor.jpeg" alt="Avatar">
+                            <div class="container">
+                                <h4><b>Mr.Sagar Ranshoor</b></h4>
+                                <p>Public Speaker & Startup Mentor</p>
+                            </div>
+                        </div>
+                        <div class="feedback">
+                            <p>E-cell FCRIT Vashi is an inspiring hub for budding entrepreneurs. It fosters creativity,
+                                collaboration, and
+                                innovation. Through workshops, events, and mentorship, it empowers students
+                                to realize their entrepreneurial dreams.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="card">
+                            <img src="images/mahendra dongre.jpeg" alt="Avatar">
+                            <div class="container">
+                                <h4><b>Mr.Mahendra Dongre</b></h4>
+                                <p>Examiner of Patents and Designs</p>
+                            </div>
+                        </div>
+                        <div class="feedback">
+                            <p>E-Cell FCRIT Vashi is a dynamic platform fostering entrepreneurial spirit. It empowers
+                                students with
+                                practical skills, mentorship, and networking opportunities,
+                                igniting innovation and nurturing future leaders effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+            </div>
+        </div>
+        <div class="footer" id="fbody">
+            <div class="footer-body">
+                <div>
+
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave"
+                                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(25,57,97,0.7)" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(25,57,97,0.5)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25,57,97,0.4)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(25,57,97,255)" />
+                        </g>
+                    </svg>
+                </div>
+                <footer>
+
+                    <div class="f-item-con">
+                        <div class="app-info">
+                            <div class="image">
+                                <img id="logoimg" src="images\logo1.png" alt="Ecell logo">
+                                <p id="logoinfo">
+                                    <strong>The <br> Entrepreneurship Cell </strong><br>FCRIT Vashi
+                                </p>
+                                <br>
+                            </div>
+                            <div class="map">
+                                <div class="footer-title">
+                                    <strong>Meet us at</strong>
+                                </div>
+                            </div>
+                            <div class="google-map">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas">
+                                        <iframe width="250" height="150" id="gmap_canvas"
+                                            src="https://maps.google.com/maps?q=fcrit+vashi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <br>
+                                <p id="addr"><img width="19" height="25"
+                                        src="https://img.icons8.com/color/48/place-marker--v1.png"
+                                        alt="place-marker--v1" />FCRIT, near Noor Masjid, Sector 9A, Vashi</p>
+                            </div>
+
+                        </div>
+                        <div class="useful-links">
+                            <div class="footer-title"><strong>Useful Links</strong></div>
+                            <ul>
+                                <li><a href="#homehead" style="text-decoration: none ; color: white;">Home</a></li>
+                                <li><a href="./parts/about_us.html" style="text-decoration: none; color: white;">About
+                                        Us</a></li>
+                                <li><a href="#wwd" style="text-decoration: none; color: white;">Events</a></li>
+                                <li><a href="#spons" style="text-decoration: none; color: white;">Sponsors</a></li>
+                                <li><a href="./parts/team.html" style="text-decoration: none; color: white;">Team</a>
+                                </li>
+                                <li><a href="./parts/blogs.html" style="text-decoration: none; color: white;">Blogs</a>
+                                </li>
+                                <!-- <li>Initatives</li> -->
+                            </ul>
+                            <div class="soc-med">
+                                <div class="footer-title">
+                                    <p><strong>Follow us on</strong></p>
+                                </div>
+                                <div class="icons">
+                                    <a href="https://in.linkedin.com/company/fcrit-entrepreneurship-cell"
+                                        class="fa fa-linkedin"></a>
+                                    <a href="https://www.instagram.com/ecellfcrit/" class="fa fa-instagram"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g-i-t">
+                            <div class="footer-title"><strong>
+                                    Get in Touch</strong></div>
+                            <form action="https://formsubmit.co/b710d422f9642f19fc2329ad65398aa8" method="post"
+                                class="space-y-2">
+                                <input type="text" name="Name" class="g-inp" id="g-name" placeholder='Name'
+                                    style="display: block;" />
+                                <input type="email" name="Email" class="g-inp" id="g-email" placeholder='Email'
+                                    style="display: block;" />
+                                <textarea type="text" name="Message" class="g-inp h-40 resize-none" id="g-msg"
+                                    placeholder='Message...'></textarea>
+                                <input type="hidden" name="_template" value="table">
+                                <button type="submit" class='f-btn' name="submit">Submit</button>
+                            </form>
+                        </div>
+                        <div>
+                            <div class="hidden"><strong>
+                                    Get in Touch</strong></div>
+                        </div>
+                    </div>
+
+                    <div class='cr-con'>Copyright &copy; 2024 | Made by Reeba</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

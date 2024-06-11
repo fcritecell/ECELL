@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events</title>
+<link rel="stylesheet" href="/stylings/aboutus_home.css">
+<link rel="stylesheet" href="style1.css"><link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: Titillium Web;
+    margin: 0;
+    padding: 0;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .event {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+
+  .event:nth-child(even) .content {
+    order: 2;
+    background-color: #90E4FF;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .event:nth-child(odd) .content {
+    order: 1;
+    background-color: #FF9A9A;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .event:nth-child(even) .content img {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .event:nth-child(odd) .content img {
+    margin-right: auto;
+    margin-left: 0;
+
+  }
+
+  .date {
+    flex: 0 0 150px;
+    font-weight: 600; 
+    font-size: 30px;
+  }
+  .arrow-circle {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.circle {
+  width: 50px; /* Adjust size of circle */
+  height: 50px; /* Adjust size of circle */
+  border-radius: 50%; /* Makes it a circle */
+  background-color: #3498db; /* Circle background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  color: #fff; /* Arrow color */
+  font-size: 24px; /* Arrow size */
+}
+  .content {
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+  }
+
+  .content h2 {
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .content p {
+    padding: 5px;
+    font-weight:600;
+  }
+  .content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+  <div id="site-background">
+    <div class="layer-wrapper">
+        <div class="layer1">
+            <div class="element2"><img src="images/element2.png" alt="Designerpart Designagentur"></div>
+            <div class="element5"><img src="images/element5.png" alt="Designerpart Designagentur"></div>
+        </div>
+        <div class="layer2">
+            <div class="element3"><img src="images/element3.png" alt="Designerpart Designagentur"></div>
+            <div class="element4"><img src="images/element4.png" alt="Designerpart Designagentur"></div>
+            <div class="element6"><img src="images/element6.png" alt="Designerpart Designagentur"></div>
+        </div>
+    </div>
+</div>
+  <div class="mynavs">
+    <nav class="navbar navbar-expand-sm navbar-blue">
+        <a href="" class="navbar-brandss">
+            <img id="images" src="images/logo1.png" alt="" height="90" width="80"><p id="brandnames">FCRIT</p></a>
+        <div class="nav-optionss">
+            <ul class="navbar-navs">
+                <li class="nav-items"><a href="/final.html" class="nav-links" style="font-weight: bold;">Home</a></li>
+                <li class="nav-items"><a href="http://localhost/sip/sip.html." class="nav-links"
+                        style="font-weight: bold;">SIP</a></li>
+
+                <div class="dropdowns">
+                    <li class="nav-link-dropbtns" style="font-weight: bold;">About Us</li>
+                    <div class="dropdown-contents">
+                        <a href="/parts/about_us.html">About</a>
+                        <a href="/parts/events.html">Events</a>
+                        <a href="/parts/team.html">Team</a>
+
+                    </div>
+                </div>
+                <li class="nav-items"><a href="blogs.html" class="nav-links" style="font-weight: bold;">Blogs
+                        &
+                        E-education</a></li>
+                </li>
+
+                <li class="nav-items"><a href="./parts/reg.html" class="nav-links"
+                        style="font-weight: bold;">Register</a></li>
+                <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+            </ul>
+
+        </div>
+    </nav>
+</div><div class="title" style="font-weight: 900; font-size: 80px; text-align: center; margin-top: 10px;"> EVENTS </div>
+<div class="timeline">
+  <div class="event">
+    <div class="date">2nd FEB 2024</div>
+    <div class="content">
+      <h2>Out-Reach Program</h2>
+      <p>E-Cell FCRIT conducted an outreach program to educate the upcoming generation about future goals. It is aiming to conduct such more events for welfare of the society and spread awareness among youth</p>
+      <h3>CHECK OUT GALLERY FOR MORE <a href="archives.html" class="arrow-circle" >
+        <div class="circle">
+          <div class="arrow">&#10140;</div>
+        </div>
+      </a></h3><!-- <img src="./images/op/op (1).jpg" height="200px" width="200px" alt="Event 1">
+      <img src="./images/op/op (3).jpg" height="200px" width="200px" alt="Event 1">
+      <img src="./images/op/op (4).jpg" height="200px" width="200px" alt="Event 1">
+       --><img src="/images/img/op/op (6).jpg" height="200px" width="200px" alt="Event 1">
+      <img src="/images/img/op/op (9).jpg" height="200px" width="200px" alt="Event 1">
+    </div>
+  </div>
+  <div class="event">
+    <div class="content">
+      <h2>AARTH SAMVAAD</h2>
+      <p>Empower your wallet, shape your future 💰🌟
+        Grateful for everyone who joined us on the journey to financial empowerment. Cheers to a brighter, wealthier future!
+        #FinancialWisdom #ecell #FinanceEmpowerment</p>
+        <h3>CHECK OUT GALLERY FOR MORE <a href="archives.html" class="arrow-circle">
+          <div class="circle">
+            <div class="arrow">&#10140;</div>
+          </div>
+        </a></h3>
+        <!-- <img src="./img/as/as1.jpg" height="200px" width="200px" alt="Event 1">
+      <img src="./img/as/as2.jpg" height="200px" width="200px" alt="Event 1">
+      <img src="./img/as/as3.jpg" height="200px" width="200px" alt="Event 1">
+      <img src="./img/as/as4.jpg" height="200px" width="200px" alt="Event 1">
+      <img src="./img/as/as5.jpg" height="200px" width="200px" alt="Event 1">
+      <img src="./img/as/as6.jpg" height="200px" width="200px" alt="Event 1">
+      <img src="./img/as/as7.jpg" height="200px" width="200px" alt="Event 1"> -->
+      <img src="/images/img/as/as9.JPG" height="200px" width="200px" alt="Event 1">
+      <img src="/images/img/as/as10.jpg" height="200px" width="200px" alt="Event 1">
+    </div>
+    <div class="date">23rd JAN 2024</div>  
+  </div>
+  
+  <div class="event">
+    
+    <div class="content">
+      <h2>BRANDBLITZ</h2>
+      <p>🚀✨ BrandBlitz Event Highlights! 🎥🌟 Get inspired and empowered to build strong brand identities and leave a lasting impact. Stay tuned for more insightful clips and memorable moments from BrandBlitz! 💡
+      </p><h3>CHECK OUT GALLERY FOR MORE <a href="archives.html" class="arrow-circle">
+        <div class="circle">
+          <div class="arrow">&#10140;</div>
+        </div>
+      </a></h3>
+      <img src="/images/img/bb/bb (5).jpeg" height="200px" width="200px" alt="Event 3">
+      <img src="/images/img/bb/bb (3).jpeg" height="200px" width="200px" alt="Event 3"> 
+      
+      
+    </div><div class="date">27th SEPT 2023</div>
+  </div>
+
+  <div class="event">
+    <div class="content">
+      <h2>Where Do Ideas come from ?</h2>
+      <p>🌟🧠 "Illuminating Pathways to Imagination"
+        Embark on a Journey of Ideas Exploring the Roots & the Cosmic Origins of Creativity of Ideas at the 'Where Do Ideas Come From?' Seminar 🌱🔬🎓 
+        #EcellInnovationForum #IdeaValidationSeminar #EntrepreneurialInsights #StartupStrategies</p> 
+        <h3>CHECK OUT GALLERY FOR MORE  <a href="archives.html" class="arrow-circle">
+          <div class="circle">
+            <div class="arrow">&#10140;</div>
+          </div>
+        </a></h3>
+        <img src="/images/img/wdicf/wdicf (1).jpeg" width="200px" alt="Event 3">
+        <img src="/images/img/wdicf/wdicf (3).jpeg" width="200px" alt="Event 3">
+    </div>
+    <div class="date">13th August 2023</div>
+  </div>
+
+<!--   <div class="event">
+    
+    <div class="content">
+      <h2>E-Katta</h2>
+      <p>Description of Event 3.</p>
+      <img src="https://via.placeholder.com/150" alt="Event 3">
+    </div><div class="date">2004</div>
+  </div> -->
+  <!-- Add more events as needed -->
+</div>
+
+</body>
+</html>
