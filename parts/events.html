@@ -6,9 +6,11 @@
 <title>Events</title>
 <link rel="stylesheet" href="/stylings/aboutus_home.css">
 <link rel="stylesheet" href="style1.css"><link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
   body {
-    font-family: Titillium Web;
+    font-family: 'Titillium Web', sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -22,6 +24,7 @@
 
   .event {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 50px;
@@ -49,7 +52,6 @@
   .event:nth-child(odd) .content img {
     margin-right: auto;
     margin-left: 0;
-
   }
 
   .date {
@@ -57,25 +59,27 @@
     font-weight: 600; 
     font-size: 30px;
   }
+
   .arrow-circle {
-  display: inline-block;
-  text-decoration: none;
-}
+    display: inline-block;
+    text-decoration: none;
+  }
 
-.circle {
-  width: 50px; /* Adjust size of circle */
-  height: 50px; /* Adjust size of circle */
-  border-radius: 50%; /* Makes it a circle */
-  background-color: #3498db; /* Circle background color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.arrow {
-  color: #fff; /* Arrow color */
-  font-size: 24px; /* Arrow size */
-}
+  .arrow {
+    color: #fff;
+    font-size: 24px;
+  }
+
   .content {
     flex: 1;
     padding: 20px;
@@ -92,16 +96,177 @@
 
   .content p {
     padding: 5px;
-    font-weight:600;
+    font-weight: 600;
   }
+
   .content img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
   }
+
+  .title {
+    font-weight: 900;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+    font-family: 'Syne', sans-serif;
+    --color1: #FFF ;
+    --color2: #181818 ;
+}
+.logo img {width: 50px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 300;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+    opacity: 0.3;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+
+   @media (max-width: 768px) {
+    .timeline {
+      padding: 10px;
+    }
+
+    .event {
+      margin-bottom: 30px;
+    }
+
+    .date {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      padding: 10px;
+    }
+
+    .content h2 {
+      font-size: 30px;
+    }
+
+    .content p {
+      font-size: 16px;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+
+  /* Tablet Styles */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .timeline {
+      padding: 0px;
+    }
+
+    .date {
+      font-size: 50px;
+      margin-top: 10%;
+      font-weight: 500;
+    }
+
+    .content h2 {
+      font-size: 35px;
+    }
+
+    .content p {
+      font-size: 18px;
+    }
+
+    .title {
+      font-size: 60px;
+      margin-top: 20px;
+    }
+  }
 </style>
 </head>
 <body>
+  <header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='#'><img src='images\logo1.png'/></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">SIP</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Blog & E-Education</a></li>
+                <li><a href="">Register</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
   <div id="site-background">
     <div class="layer-wrapper">
         <div class="layer1">
@@ -115,43 +280,7 @@
         </div>
     </div>
 </div>
-  <div class="mynavs">
-    <nav class="navbar navbar-expand-sm navbar-blue">
-        <a href="" class="navbar-brandss">
-            <img id="images" src="images/logo1.png" alt="" height="90" width="80"><p id="brandnames">FCRIT</p></a>
-        <div class="nav-optionss">
-            <ul class="navbar-navs">
-                <li class="nav-items"><a href="/final.html" class="nav-links" style="font-weight: bold;">Home</a></li>
-                <li class="nav-items"><a href="http://localhost/sip/sip.html." class="nav-links"
-                        style="font-weight: bold;">SIP</a></li>
-
-                <div class="dropdowns">
-                    <li class="nav-link-dropbtns" style="font-weight: bold;">About Us</li>
-                    <div class="dropdown-contents">
-                        <a href="/parts/about_us.html">About</a>
-                        <a href="/parts/events.html">Events</a>
-                        <a href="/parts/team.html">Team</a>
-
-                    </div>
-                </div>
-                <li class="nav-items"><a href="blogs.html" class="nav-links" style="font-weight: bold;">Blogs
-                        &
-                        E-education</a></li>
-                </li>
-
-                <li class="nav-items"><a href="./parts/reg.html" class="nav-links"
-                        style="font-weight: bold;">Register</a></li>
-                <div class="container" onclick="myFunction(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-
-            </ul>
-
-        </div>
-    </nav>
-</div><div class="title" style="font-weight: 900; font-size: 80px; text-align: center; margin-top: 10px;"> EVENTS </div>
+  <div class="title" style="font-weight: 900; font-size: 80px; text-align: center; margin-top: 10px;"> EVENTS </div>
 <div class="timeline">
   <div class="event">
     <div class="date">2nd FEB 2024</div>
@@ -162,10 +291,7 @@
         <div class="circle">
           <div class="arrow">&#10140;</div>
         </div>
-      </a></h3><!-- <img src="./images/op/op (1).jpg" height="200px" width="200px" alt="Event 1">
-      <img src="./images/op/op (3).jpg" height="200px" width="200px" alt="Event 1">
-      <img src="./images/op/op (4).jpg" height="200px" width="200px" alt="Event 1">
-       --><img src="/images/img/op/op (6).jpg" height="200px" width="200px" alt="Event 1">
+      </a></h3><img src="/images/img/op/op (6).jpg" height="200px" width="200px" alt="Event 1">
       <img src="/images/img/op/op (9).jpg" height="200px" width="200px" alt="Event 1">
     </div>
   </div>
@@ -180,13 +306,6 @@
             <div class="arrow">&#10140;</div>
           </div>
         </a></h3>
-        <!-- <img src="./img/as/as1.jpg" height="200px" width="200px" alt="Event 1">
-      <img src="./img/as/as2.jpg" height="200px" width="200px" alt="Event 1">
-      <img src="./img/as/as3.jpg" height="200px" width="200px" alt="Event 1">
-      <img src="./img/as/as4.jpg" height="200px" width="200px" alt="Event 1">
-      <img src="./img/as/as5.jpg" height="200px" width="200px" alt="Event 1">
-      <img src="./img/as/as6.jpg" height="200px" width="200px" alt="Event 1">
-      <img src="./img/as/as7.jpg" height="200px" width="200px" alt="Event 1"> -->
       <img src="/images/img/as/as9.JPG" height="200px" width="200px" alt="Event 1">
       <img src="/images/img/as/as10.jpg" height="200px" width="200px" alt="Event 1">
     </div>
